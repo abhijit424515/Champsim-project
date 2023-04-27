@@ -18,7 +18,7 @@ uint32_t CACHE::llc_find_victim(uint32_t cpu, uint64_t instr_id, uint32_t set, c
             DP ( if (warmup_complete[cpu]) {
             cout << "[" << NAME << "] " << __func__ << " instr_id: " << instr_id << " invalid set: " << set << " way: " << way;
             cout << hex << " address: " << (full_addr>>LOG2_BLOCK_SIZE) << " victim address: " << block[set][way].address << " data: " << block[set][way].data;
-            cout << dec << " lfu: " << block[set][way].lfu << endl; });
+            cout << dec << " lru: " << block[set][way].lru << endl; });
 
             break;
         }
@@ -26,7 +26,7 @@ uint32_t CACHE::llc_find_victim(uint32_t cpu, uint64_t instr_id, uint32_t set, c
 
     // MFU victim
     if (way == NUM_WAY) {
-        way = 0; //max lfu
+        way = 0; //max lru
         for (int i=1; i<NUM_WAY; i++) {
             if(block[set][way].lru <= block[set][i].lru){
                 way = i;
@@ -35,7 +35,7 @@ uint32_t CACHE::llc_find_victim(uint32_t cpu, uint64_t instr_id, uint32_t set, c
         DP ( if (warmup_complete[cpu]) {
         cout << "[" << NAME << "] " << __func__ << " instr_id: " << instr_id << " replace set: " << set << " way: " << way;
         cout << hex << " address: " << (full_addr>>LOG2_BLOCK_SIZE) << " victim address: " << block[set][way].address << " data: " << block[set][way].data;
-        cout << dec << " lfu: " << block[set][way].lfu << endl; });
+        cout << dec << " lru: " << block[set][way].lru << endl; });
     }
 
     if (way == NUM_WAY) {
