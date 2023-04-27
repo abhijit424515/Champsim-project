@@ -1,0 +1,80 @@
+
+*** ChampSim Multicore Out-of-Order Simulator ***
+
+Warmup Instructions: 30000000
+Simulation Instructions: 30000000
+Number of CPUs: 1
+LLC sets: 8192
+LLC ways: 16
+Off-chip DRAM Size: 4096 MB Channels: 1 Width: 64-bit Data Rate: 3200 MT/s
+
+CPU 0 runs ../traces//sssp-3.trace.gz
+CPU 0 Bimodal branch predictor
+Heartbeat CPU 0 instructions: 10000002 cycles: 3729824 heartbeat IPC: 2.68109 cumulative IPC: 2.68109 (Simulation time: 0 hr 0 min 10 sec) 
+Heartbeat CPU 0 instructions: 20000001 cycles: 7709503 heartbeat IPC: 2.51277 cumulative IPC: 2.5942 (Simulation time: 0 hr 0 min 22 sec) 
+Heartbeat CPU 0 instructions: 30000002 cycles: 11853149 heartbeat IPC: 2.41333 cumulative IPC: 2.53097 (Simulation time: 0 hr 0 min 34 sec) 
+
+Warmup complete CPU 0 instructions: 30000002 cycles: 11853149 (Simulation time: 0 hr 0 min 34 sec) 
+
+Heartbeat CPU 0 instructions: 40000001 cycles: 33530017 heartbeat IPC: 0.461321 cumulative IPC: 0.461321 (Simulation time: 0 hr 0 min 45 sec) 
+Heartbeat CPU 0 instructions: 50000002 cycles: 53845396 heartbeat IPC: 0.492238 cumulative IPC: 0.476278 (Simulation time: 0 hr 0 min 56 sec) 
+Heartbeat CPU 0 instructions: 60000002 cycles: 73209396 heartbeat IPC: 0.516422 cumulative IPC: 0.488948 (Simulation time: 0 hr 1 min 8 sec) 
+Finished CPU 0 instructions: 30000000 cycles: 61356247 cumulative IPC: 0.488948 (Simulation time: 0 hr 1 min 8 sec) 
+
+ChampSim completed all CPUs
+
+Region of Interest Statistics
+
+CPU 0 cumulative IPC: 0.488948 instructions: 30000000 cycles: 61356247
+L1D TOTAL     ACCESS:    7969718  HIT:    6471019  MISS:    1498699
+L1D LOAD      ACCESS:    7279636  HIT:    5908435  MISS:    1371201
+L1D RFO       ACCESS:     690082  HIT:     562584  MISS:     127498
+L1D PREFETCH  ACCESS:          0  HIT:          0  MISS:          0
+L1D WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+L1D PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+L1D AVERAGE MISS LATENCY: 55.5531 cycles
+L1I TOTAL     ACCESS:    3242171  HIT:    3242171  MISS:          0
+L1I LOAD      ACCESS:    3242171  HIT:    3242171  MISS:          0
+L1I RFO       ACCESS:          0  HIT:          0  MISS:          0
+L1I PREFETCH  ACCESS:          0  HIT:          0  MISS:          0
+L1I WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+L1I PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+L1I AVERAGE MISS LATENCY: -nan cycles
+L2C TOTAL     ACCESS:    1582357  HIT:     401272  MISS:    1181085
+L2C LOAD      ACCESS:    1371200  HIT:     229652  MISS:    1141548
+L2C RFO       ACCESS:     127495  HIT:      87958  MISS:      39537
+L2C PREFETCH  ACCESS:          0  HIT:          0  MISS:          0
+L2C WRITEBACK ACCESS:      83662  HIT:      83662  MISS:          0
+L2C PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+L2C AVERAGE MISS LATENCY: 50.91 cycles
+LLC TOTAL     ACCESS:    2142163  HIT:     961078  MISS:    1181085
+LLC LOAD      ACCESS:     944746  HIT:     944746  MISS:          0
+LLC RFO       ACCESS:      16332  HIT:      16332  MISS:          0
+LLC PREFETCH  ACCESS:          0  HIT:          0  MISS:          0
+LLC WRITEBACK ACCESS:    1181085  HIT:          0  MISS:    1181085
+LLC PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+LLC AVERAGE MISS LATENCY: 0 cycles
+Major fault: 0 Minor fault: 8963
+
+DRAM Statistics
+ CHANNEL 0
+ RQ ROW_BUFFER_HIT:     134630  ROW_BUFFER_MISS:      85377
+ DBUS_CONGESTED:       8355
+ WQ ROW_BUFFER_HIT:          0  ROW_BUFFER_MISS:          0  FULL:          0
+
+ AVG_CONGESTED_CYCLE: 5
+
+CPU 0 Branch Prediction Accuracy: 94.2092% MPKI: 8.5372 Average ROB Occupancy at Mispredict: 74.6593
+
+Branch types
+NOT_BRANCH: 25576969 85.2566%
+BRANCH_DIRECT_JUMP: 1243969 4.14656%
+BRANCH_INDIRECT: 0 0%
+BRANCH_CONDITIONAL: 3177199 10.5907%
+BRANCH_DIRECT_CALL: 816 0.00272%
+BRANCH_INDIRECT_CALL: 0 0%
+BRANCH_RETURN: 816 0.00272%
+BRANCH_OTHER: 0 0%
+
+
+gzip: stdout: Broken pipe
